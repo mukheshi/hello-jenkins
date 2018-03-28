@@ -2,7 +2,7 @@
  
 sshpass -p app ssh app@192.168.0.114 <<EOF
   cd ~/hello-jenkins
-  git pull origin master -r
+  git pull origin master
   npm install --production
   forever start app.js
   exit
