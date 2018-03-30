@@ -3,6 +3,7 @@
 ssh -o "StrictHostKeyChecking no" app@192.168.0.107 <<EOF
   cd ~/hello-jenkins
   forever stopall
+  sleep 10
   git pull
   npm install --production
   forever start app.js
