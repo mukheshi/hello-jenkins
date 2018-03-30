@@ -1,9 +1,9 @@
 #!/bin/sh
  
-sshpass -p app ssh app@192.168.0.114 <<EOF
+ssh -o "StrictHostKeyChecking no" app@192.168.0.107 <<EOF
   cd ~/hello-jenkins
-  git pull origin master
+  git pull
   npm install --production
-  forever start app.js
+  forever restartall
   exit
 EOF
