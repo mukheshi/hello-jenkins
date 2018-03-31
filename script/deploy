@@ -1,6 +1,6 @@
 #!/bin/sh
  
-ssh -o "StrictHostKeyChecking no" app@192.168.0.107 <<EOF
+ssh -o "StrictHostKeyChecking no" app@192.168.0.109 <<EOF
   cd ~/hello-jenkins
   forever stopall
   sleep 10
